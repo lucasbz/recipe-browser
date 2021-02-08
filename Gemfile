@@ -15,8 +15,6 @@ gem 'puma', '~> 5.0'
 # Use Rubocop as Linter
 gem 'rubocop', require: false
 gem 'rubocop-rails'
-# Use Simplecov for Code Coverage
-gem 'simplecov', require: false, group: :test
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -56,6 +54,8 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
+  # Use Simplecov for Code Coverage
+  gem 'simplecov', require: false
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
