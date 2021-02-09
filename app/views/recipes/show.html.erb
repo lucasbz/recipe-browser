@@ -1,0 +1,32 @@
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="card shadow-md">
+            <div class="card-header"><%= @recipe.title %></div>
+            <div class="row">
+                <div class="col-sm">
+                    <img src="<%= @recipe.photo.url %>" width="100%" height="100%"/>
+                </div>
+                <div class="col-sm">
+                    <div class="card-body">
+                        <p class="card-text"><%= @recipe.description %></p>
+                        <p class="card-text">
+                        <% @recipe.tags.each do |tag| %>
+                            <span class="badge text-light bg-info"><%= tag.name %></span>
+                        <% end unless @recipe.tags.nil? || @recipe.tags.empty? %>
+                        </p>
+                        <% unless @recipe.chef.nil? %>
+                            <p class="card-text">
+                            by Chef <%= @recipe.chef.name %>!</p>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="btn-group">
+                <%= link_to 'Back', recipes_path, class: 'btn btn-sm btn-outline-secondary' %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

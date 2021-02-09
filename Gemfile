@@ -5,7 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 gem 'activeresource'
-gem 'contentful'
+gem 'contentful_model'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record
@@ -59,6 +60,7 @@ group :test do
   gem 'simplecov', require: false
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'webmock'
 end
 
 group :development, :test do

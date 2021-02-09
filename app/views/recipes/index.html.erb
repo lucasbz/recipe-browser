@@ -5,7 +5,7 @@
       <% @recipes.each do |recipe| %>
         <div class="col">
           <div class="card shadow-sm">
-            <img class="card-img-top" src="<%= recipe.image_url %>" width="100%" height="225"/>
+            <img class="card-img-top" src="<%= recipe.photo.url %>" width="100%" height="225"/>
             <div class="card-body">
               <p class="card-text"><%= recipe.title %></p>
               <div class="d-flex justify-content-between align-items-center">
