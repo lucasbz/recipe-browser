@@ -3,10 +3,10 @@
 # Controller for Recipes
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all.load
+    @recipes = ContentfulService.new.all_recipes
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = ContentfulService.new.find_recipe(params[:id])
   end
 end
